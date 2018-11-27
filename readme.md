@@ -1,8 +1,8 @@
 # xPLORER
 
-[![Build Status](https://travis-ci.org/rishchou/xPLORER.svg?branch=master)](https://travis-ci.org/rishchou/laneDetector)
+[![Build Status](https://travis-ci.org/rishchou/xPLORER.svg?branch=master)](https://travis-ci.org/rishchou/xPLORER)
 
-[![Coverage Status](https://coveralls.io/repos/github/rishchou/xPLORER/badge.svg?branch=master)](https://coveralls.io/github/rishchou/laneDetector?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/rishchou/xPLORER/badge.svg?branch=master)](https://coveralls.io/github/rishchou/xPLORER?branch=master)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
