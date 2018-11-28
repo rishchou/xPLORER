@@ -1,10 +1,9 @@
 # xPLORER
 
 [![Build Status](https://travis-ci.org/rishchou/xPLORER.svg?branch=master)](https://travis-ci.org/rishchou/xPLORER)
-
 [![Coverage Status](https://coveralls.io/repos/github/rishchou/xPLORER/badge.svg?branch=master)](https://coveralls.io/github/rishchou/xPLORER?branch=master)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+---
 
 ## Project Decription
 
