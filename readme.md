@@ -16,6 +16,12 @@ robots to explore unmanned spaces and difficult terrains like mines etc. and cre
 potential hazards or safe navigation. It will also help in creating 3D models of commercial spaces for virtual tours
 etc. without any human intervention.
 
+## Activity diagram:
+
+<p align="center">
+  <img width="460" height="800" src="https://github.com/rishchou/xPLORER/blob/master/UML/Initial/Activity%20Diagram.jpeg">
+</p>
+
 ## Authors
 
 Sprint 1:
@@ -51,6 +57,11 @@ Detailed SIP Enactment with product backlog,iteration backlog and work log can b
 
 Sprint notes can be found [at](https://docs.google.com/document/d/1vihsMah5-x3lxd72F6U38xuexMgioh-XDoyO9bQRQPM/edit?usp=sharing)
 
+## To-do tasks for pair programming (Driver navigator discussion)
+- [x] Add class and activity diagram 
+- [x] Add defect log and release backlog
+- [x] Add LICENSE file
+- [x] Update SIP Logs
 
 ## License
 
