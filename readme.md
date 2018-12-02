@@ -57,6 +57,18 @@ Sprint notes can be found [at](https://docs.google.com/document/d/1vihsMah5-x3lx
 - [x] Add LICENSE file
 - [x] Update SIP Logs
 
+## Operation/Demo steps
+To be updated
+
+## Dependencies
+To be updated
+
+## Known issues/ bugs
+To be updated
+
+## API
+To be updated
+
 ## License
 
 ```
