@@ -35,8 +35,14 @@ THE POSSIBILITY OF SUCH DAMAGE.
  * @brief      : Class implementation for obstacle detection functionality
  *============================================================================
  */
+
 #ifndef INCLUDE_XPLORER_OBSTACLEDETECTOR_HPP_
 #define INCLUDE_XPLORER_OBSTACLEDETECTOR_HPP_
+
+#include <iostream>
+#include "ros/ros.h"
+#include "sensor_msgs/LaserScan.h"
+#include "std_msgs/Float64.h"
 
 class obstacleDetector {
   private:
@@ -44,10 +50,14 @@ class obstacleDetector {
     ros::Subscriber sub1;
     ros::Publisher pub1;
     bool collision;
+    ros::Subscriber disSub1;
+    ros::Publisher disPub1;
   public:
     obstacleDetector();
     ~obstacleDetector();
     void sensorCallback(const sensor_msgs::LaserScan::ConstPtr& msg);
+    void sensorCallbackDist(const std_msgs::Float64::ConstPtr& msg);
+    bool collisionDetect();
 };
 
 #endif //INCLUDE_XPLORER_OBSTACLEDETECTOR_HPP_
