@@ -43,20 +43,47 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #include "ros/ros.h"
 #include "sensor_msgs/LaserScan.h"
 #include "std_msgs/Float64.h"
-
+/**
+ * @brief Class for obstacleDetection part of the robot
+ */
 class obstacleDetector {
   private:
+// Create a ROS node handle
     ros::NodeHandle n1;
+// Subscriber for subscribing to the /scan topic for incoming data
     ros::Subscriber sub1;
-    ros::Publisher pub1;
+// Declare variable to store collision predictions
     bool collision;
+// Subscriber for /dist topic
     ros::Subscriber disSub1;
+// Publisher for /dist topic
     ros::Publisher disPub1;
   public:
+/**
+ * @brief Constructor
+ */
     obstacleDetector();
+/**
+ * @brief Destructor
+ */
     ~obstacleDetector();
+/**
+ * @brief Callback function for /scan topic
+ * @param msg Message over the topic /scan
+ * @return void 
+ */
     void sensorCallback(const sensor_msgs::LaserScan::ConstPtr& msg);
+/**
+ * @brief Callback function for /dist topic
+ * @param msg Message over the topic /dist
+ * @return void 
+ */
     void sensorCallbackDist(const std_msgs::Float64::ConstPtr& msg);
+/**
+ * @brief Function for returning value of collision flag
+ * @param none
+ * @return bool collision flag value
+ */  
     bool collisionDetect();
 };
 

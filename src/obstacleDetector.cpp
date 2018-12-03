@@ -36,17 +36,29 @@ THE POSSIBILITY OF SUCH DAMAGE.
  *============================================================================
  */
 #include"../include/xplorer/obstacleDetector.hpp"
-
+/**
+ * @brief Constructor of the class
+ */
 obstacleDetector::obstacleDetector() {
+// Collision flag is initialized
         collision = false;
+// Laser Scan topic is subscribed 
         sub1 = n1.subscribe("/scan", 1000, &obstacleDetector::sensorCallback, this);
+// /Message over dist topic is published
         disPub1 = n1.advertise<std_msgs::Float64>("/dist",1000);
+// /dist topic is subscribed
         disSub1 = n1.subscribe<std_msgs::Float64>("/dist",1000,&obstacleDetector::sensorCallbackDist, this);
 }
-
+/**
+ * @brief Destructor of the class
+ */
 obstacleDetector::~obstacleDetector() {
 }
-
+/**
+ * @brief Callback function for /scan topic
+ * @param msg Message over the topic /scan
+ * @return void 
+ */
 void obstacleDetector::sensorCallback( const sensor_msgs::LaserScan::ConstPtr& msg) {
         float val = 1000;
         for (const auto& i : msg->ranges) {
@@ -58,7 +70,11 @@ void obstacleDetector::sensorCallback( const sensor_msgs::LaserScan::ConstPtr& m
   floatVal.data = val;
   disPub1.publish(floatVal);
 }
-
+/**
+ * @brief Callback function for /dist topic
+ * @param msg Message over the topic /dist
+ * @return void 
+ */
 void obstacleDetector::sensorCallbackDist(const std_msgs::Float64::ConstPtr& msg) {
         float val = 1;
         if ((msg -> data) < val) {
@@ -67,7 +83,11 @@ void obstacleDetector::sensorCallbackDist(const std_msgs::Float64::ConstPtr& msg
         collision = false;
         }
 }
-
+/**
+ * @brief Function for returning value of collision flag
+ * @param none
+ * @return bool collision flag value
+ */
 bool obstacleDetector::collisionDetect() {
         return collision;
 }

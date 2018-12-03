@@ -41,26 +41,46 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #include "../include/xplorer/obstacleDetector.hpp"
 #include "../include/xplorer/navigator.hpp"
 
+/**
+ * @brief      Class for testing
+ */
 class TestClass {
  private:
          geometry_msgs::Twist twist;
  public:
+/**
+ * @brief Temporary callback function 
+ * @param msg Temporary message
+ * @return void 
+ */
          void publish( const geometry_msgs::Twist::ConstPtr& msg) {
          twist = *msg;
 }
 };               
-
+/**
+ * @brief Test to find if object is initialized and the navigator program functions properly
+ * @param TESTSuite Gtest framework
+ * @param Navigator_Object_is_initialized Test name
+ */
 TEST(TESTSuite, Navigator_Object_is_initialized) {
         EXPECT_NO_FATAL_FAILURE(navigator navigator);
 }
-
+/**
+ * @brief Test to find if subscriber for /dist is working
+ * @param TESTSuite Gtest framework
+ * @param Subscribe_Test Test name
+ */
 TEST(TESTSuite, Subscribe_Test) {
         ros::NodeHandle n6;
         auto pub = n6.advertise<std_msgs::Float64>("/dist",1000);
         ros::Duration(1).sleep();
         EXPECT_EQ(pub.getNumSubscribers(),1);
 }
-
+/**
+ * @brief Test to find if publisher for /cmd_vel_mux/input/navi is working
+ * @param TESTSuite Gtest framework
+ * @param Publish_Test Test name
+ */
 TEST(TESTSuite, Publish_Test) {
         ros::NodeHandle n7;
         TestClass test;

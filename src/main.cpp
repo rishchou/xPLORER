@@ -37,13 +37,20 @@ THE POSSIBILITY OF SUCH DAMAGE.
  */
 
 #include "../include/xplorer/navigator.hpp"
+/**
+ * @brief Main function where the node "xplorer" is created and operates
+ * @param argc number of input arguments
+ * @param argv argument for calling main function
+ * @return int (typically 0 if main function works properly)
+ */
 
 int main(int argc, char* argv[]) {
-
+// ROS node initialization
 ros::init(argc, argv , "xplorer");
+// Object creation of class navigator
 navigator navigator;
+// Function call to run the move function
 navigator.move();
 return 0;
-
 }
 

@@ -41,9 +41,17 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #include "../include/xplorer/obstacleDetector.hpp"
 #include "../include/xplorer/navigator.hpp"
 
+/**
+ * @brief      Class for testing
+ */
 class testClass {
  private:
  public:
+/**
+ * @brief Temporary callback function 
+ * @param msg Temporary message
+ * @return void 
+ */
          void publishVal(const sensor_msgs::LaserScan::ConstPtr& msg) {
                  float val = 1000;
                  for (const auto& i : msg->ranges) {
@@ -53,11 +61,19 @@ class testClass {
                  }
 }
 };
-
+/**
+ * @brief Test to find if object is initialized and the obstacleDetector program functions properly
+ * @param TESTSuite Gtest framework
+ * @param ObstacleDetector_Object_is_initialized Test name
+ */
 TEST(TESTSuite, ObstacleDetector_Object_is_initialized) {
         EXPECT_NO_FATAL_FAILURE(obstacleDetector obs);
 }
-
+/**
+ * @brief Test to find if collision is not detected at a particular time
+ * @param TESTSuite Gtest framework
+ * @param Collision_should_not_be_detected Test name
+ */
 TEST(TESTSuite, Collision_should_not_be_detected) {
         obstacleDetector obs;
         ros::NodeHandle n4;
@@ -65,7 +81,11 @@ TEST(TESTSuite, Collision_should_not_be_detected) {
         ros::spinOnce();
         EXPECT_TRUE(~obs.collisionDetect());
 }
-
+/**
+ * @brief Test to find if collision is detected at a particular time
+ * @param TESTSuite Gtest framework
+ * @param Collision_should_be_detected Test name
+ */
 TEST(TESTSuite, Collision_should_be_detected) {
         obstacleDetector obs;
         ros::NodeHandle n5;

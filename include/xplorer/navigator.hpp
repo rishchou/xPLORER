@@ -41,16 +41,33 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "geometry_msgs/Twist.h"
 #include "obstacleDetector.hpp"
-
+/**
+ * @brief Class for navigation part of the robot
+ */
 class navigator {
   private:
+// Create object to initialize obstacleDetector class
     obstacleDetector obsDet;
+// Create a ROS node handle
     ros::NodeHandle n2;
+// Publisher for publishing velocity to the turtlebot
     ros::Publisher pub2;
+// Declare variable to store to-be published velocities
     geometry_msgs::Twist msg;
   public:
+/**
+ * @brief Constructor
+ */
     navigator();
+/**
+ * @brief Destructor
+ */
     ~navigator();
+/**
+ * @brief Function to move the robot
+ * @param None
+ * @return void
+ */
     void move();
 };
 

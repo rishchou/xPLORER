@@ -38,7 +38,12 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <ros/ros.h>
 #include <gtest/gtest.h>
-
+/**
+ * @brief  main function for calling the test
+ * @param  argc number of input arguments
+ * @param  argv character array
+ * @return int (typically 0 if main function works properly)
+ */
 int main(int argc, char* argv[]) {
 
 ros::init(argc, argv , "testxplorer");

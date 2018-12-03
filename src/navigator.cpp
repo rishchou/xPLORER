@@ -69,7 +69,11 @@ navigator::~navigator() {
 // Zero Velocity message is sent to turtle bot
       pub2.publish(msg);
 }
-
+/**
+ * @brief Function to move the robot
+ * @param None
+ * @return void
+ */
 void navigator::move() {
 // Publishing rate is set up at 10Hz
       ros::Rate loop_rate(10);
