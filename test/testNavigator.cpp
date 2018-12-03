@@ -73,7 +73,7 @@ TEST(TESTSuite, Navigator_Object_is_initialized) {
 TEST(TESTSuite, Subscribe_Test) {
         ros::NodeHandle n6;
         auto pub = n6.advertise<std_msgs::Float64>("/dist",1000);
-        ros::Duration(1).sleep();
+        ros::WallDuration(1).sleep();
         EXPECT_EQ(pub.getNumSubscribers(),1);
 }
 /**
