@@ -38,6 +38,10 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef INCLUDE_XPLORER_NAVIGATOR_HPP_
 #define INCLUDE_XPLORER_NAVIGATOR_HPP_
 
+
+#include "geometry_msgs/Twist.h"
+#include "obstacleDetector.hpp"
+
 class navigator {
   private:
     obstacleDetector obsDet;
