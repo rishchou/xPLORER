@@ -1,0 +1,17 @@
+<launch>
+
+    <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
+           <arg name="world_file" value ="$(find xplorer)/rviz/xPLORER.sdf"/>
+           <arg name="gui" value = "0"/>
+    </include>
+    <node
+        pkg = "xplorer"
+        name = "xplorer"
+        type = "xplorer"
+    />
+    <test
+        test-name = "testxplorer"
+        pkg = "xplorer"
+        type = "testxplorer"
+    />
+</launch>
