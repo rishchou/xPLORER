@@ -1,8 +1,11 @@
 <launch>
 
     <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
-           <arg name="world_file" value ="$(find turtlebot_gazebo)/worlds/corridor.world"/>
+           <arg name="world_file" value ="$(find xplorer)/rviz/xPLORER.sdf"/>
     </include>
+    <include file ="$(find octomap_server)/launch/octomap_mapping.launch">
+    </include>
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find xplorer)/rviz/octomap.rviz" />
     <node
         pkg = "xplorer"
         name = "xplorer"
