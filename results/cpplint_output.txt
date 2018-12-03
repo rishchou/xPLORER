@@ -1,0 +1,11 @@
+cpplint $( find . -name \*.hpp -or -name \*.cpp | grep -vE -e "^./build/" -e "^./vendor/" -e "^./docs/" -e "^./results" )
+Done processing ./src/navigator.cpp
+Done processing ./src/obstacleDetector.cpp
+Done processing ./src/main.cpp
+Done processing ./test/testNavigator.cpp
+Done processing ./test/testObstacleDetector.cpp
+Done processing ./test/main.cpp
+Done processing ./include/xplorer/navigator.hpp
+Done processing ./include/xplorer/mapGenerator.hpp
+Done processing ./include/xplorer/obstacleDetector.hpp
+
