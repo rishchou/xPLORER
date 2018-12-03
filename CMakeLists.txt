@@ -22,3 +22,5 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_executable(xplorer src/main.cpp src/navigator.cpp src/obstacleDetector.cpp)
 target_link_libraries(xplorer ${catkin_LIBRARIES})
+
+find_package(octomap REQUIRED)
