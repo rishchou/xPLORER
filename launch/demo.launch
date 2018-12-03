@@ -1,14 +1,37 @@
 <launch>
-
+     <arg name="record" default="false"/>
+     <arg name="record_time" default="30"/>
     <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
-           <arg name="world_file" value ="$(find xplorer)/rviz/xPLORER.sdf"/>
+       <arg name="world_file" value ="$(find xplorer)/rviz/xPLORER.sdf"/>
     </include>
-    <include file ="$(find octomap_server)/launch/octomap_mapping.launch">
-    </include>
+
+    <node
+        pkg="xplorer"
+        name="xplorer"
+        type="xplorer"
+        output="screen"
+        launch-prefix="gnome-terminal --command"
+     />
+    
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
+                <param name="resolution" value="0.05" />
+
+                <!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
+                <param name="frame_id" type="string" value="odom" />
+
+                <!-- maximum range to integrate (speedup!) -->
+                <param name="sensor_model/max_range" value="5.0" />
+
+                <!-- data source to integrate (PointCloud2) -->
+                <remap from="cloud_in" to="/camera/depth/points" />
+
+    </node>
+
     <node type="rviz" name="rviz" pkg="rviz" args="-d $(find xplorer)/rviz/octomap.rviz" />
     <node
-        pkg = "xplorer"
-        name = "xplorer"
-        type = "xplorer"
+        pkg="rosbag"
+        name="rosbag_recorder"
+        type="record" args="--all --output-name=$(find xplorer)/results/xplorer.bag -x /camera/(.*) --duration=$(arg record_time)" if="$(arg record)"
     />
 </launch>
+
