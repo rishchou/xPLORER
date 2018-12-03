@@ -45,7 +45,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
  * @brief Class for navigation part of the robot
  */
 class navigator {
-  private:
+ private:
 // Create object to initialize obstacleDetector class
     obstacleDetector obsDet;
 // Create a ROS node handle
@@ -54,7 +54,8 @@ class navigator {
     ros::Publisher pub2;
 // Declare variable to store to-be published velocities
     geometry_msgs::Twist msg;
-  public:
+
+ public:
 /**
  * @brief Constructor
  */
@@ -71,4 +72,4 @@ class navigator {
     void move();
 };
 
-#endif  //INCLUDE_XPLORER_NAVIGATOR_HPP_
+#endif  // INCLUDE_XPLORER_NAVIGATOR_HPP_

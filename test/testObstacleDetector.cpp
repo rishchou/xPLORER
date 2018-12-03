@@ -42,26 +42,6 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #include "../include/xplorer/navigator.hpp"
 
 /**
- * @brief      Class for testing
- */
-class testClass {
- private:
- public:
-/**
- * @brief Temporary callback function 
- * @param msg Temporary message
- * @return void 
- */
-         void publishVal(const sensor_msgs::LaserScan::ConstPtr& msg) {
-                 float val = 1000;
-                 for (const auto& i : msg->ranges) {
-                         if (i < val) {
-                              val = i;
-                         }
-                 }
-}
-};
-/**
  * @brief Test to find if object is initialized and the obstacleDetector program functions properly
  * @param TESTSuite Gtest framework
  * @param ObstacleDetector_Object_is_initialized Test name

@@ -47,7 +47,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
  * @brief Class for obstacleDetection part of the robot
  */
 class obstacleDetector {
-  private:
+ private:
 // Create a ROS node handle
     ros::NodeHandle n1;
 // Subscriber for subscribing to the /scan topic for incoming data
@@ -58,7 +58,8 @@ class obstacleDetector {
     ros::Subscriber disSub1;
 // Publisher for /dist topic
     ros::Publisher disPub1;
-  public:
+
+ public:
 /**
  * @brief Constructor
  */
@@ -87,6 +88,6 @@ class obstacleDetector {
     bool collisionDetect();
 };
 
-#endif //INCLUDE_XPLORER_OBSTACLEDETECTOR_HPP_
+#endif  // INCLUDE_XPLORER_OBSTACLEDETECTOR_HPP_
 
 

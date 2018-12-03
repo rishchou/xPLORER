@@ -45,10 +45,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
  * @return int (typically 0 if main function works properly)
  */
 int main(int argc, char* argv[]) {
-
 ros::init(argc, argv , "testxplorer");
 ::testing::InitGoogleTest(&argc, argv);
 return RUN_ALL_TESTS();
-
 }
-

@@ -42,7 +42,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
  */
 navigator::navigator() {
 // Publisher initialized for publishing to /cmd_vel_mux/input/navi topic
-      pub2 = n2.advertise<geometry_msgs::Twist>("/cmd_vel_mux/input/navi", 1000);
+      pub2 = n2.advertise<geometry_msgs::Twist>
+("/cmd_vel_mux/input/navi", 1000);
 // Subscriber initialized for subscribing to /scan topic
 //      sub = n2.subscribe("/scan", 1000, &Robot::scanCallback, this);
 // Initially zero velocities are assigned to the turtlebot

@@ -42,12 +42,14 @@ THE POSSIBILITY OF SUCH DAMAGE.
 obstacleDetector::obstacleDetector() {
 // Collision flag is initialized
         collision = false;
-// Laser Scan topic is subscribed 
-        sub1 = n1.subscribe("/scan", 1000, &obstacleDetector::sensorCallback, this);
+// Laser Scan topic is subscribed
+        sub1 = n1.subscribe("/scan", 1000,
+&obstacleDetector::sensorCallback, this);
 // /Message over dist topic is published
-        disPub1 = n1.advertise<std_msgs::Float64>("/dist",1000);
+        disPub1 = n1.advertise<std_msgs::Float64>("/dist", 1000);
 // /dist topic is subscribed
-        disSub1 = n1.subscribe<std_msgs::Float64>("/dist",1000,&obstacleDetector::sensorCallbackDist, this);
+        disSub1 = n1.subscribe<std_msgs::Float64>("/dist", 1000,
+&obstacleDetector::sensorCallbackDist, this);
 }
 /**
  * @brief Destructor of the class
@@ -59,7 +61,8 @@ obstacleDetector::~obstacleDetector() {
  * @param msg Message over the topic /scan
  * @return void 
  */
-void obstacleDetector::sensorCallback( const sensor_msgs::LaserScan::ConstPtr& msg) {
+void obstacleDetector::sensorCallback(const sensor_msgs
+::LaserScan::ConstPtr& msg) {
         float val = 1000;
         for (const auto& i : msg->ranges) {
               if (i < val) {
@@ -75,7 +78,8 @@ void obstacleDetector::sensorCallback( const sensor_msgs::LaserScan::ConstPtr& m
  * @param msg Message over the topic /dist
  * @return void 
  */
-void obstacleDetector::sensorCallbackDist(const std_msgs::Float64::ConstPtr& msg) {
+void obstacleDetector::sensorCallbackDist(const std_msgs
+::Float64::ConstPtr& msg) {
         float val = 1;
         if ((msg -> data) < val) {
         collision = true;

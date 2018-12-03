@@ -41,15 +41,15 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #define INCLUDE_XPLORER_MAPGENERATOR_HPP_
 
 class mapGenerator {
-  private:
+ private:
     navigator nav;
     ros::NodeHandle n3;
     ros::Publisher pub3;
     octomap_msgs::Octomap mapMsg;
-  public:
+ public:
     mapGenerator();
     ~mapGenerator();
     void createMap();
 };
 
-#endif  //INCLUDE_XPLORER_MAPGENERATOR_HPP_
+#endif  // INCLUDE_XPLORER_MAPGENERATOR_HPP_
