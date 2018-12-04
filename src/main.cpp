@@ -45,12 +45,14 @@ THE POSSIBILITY OF SUCH DAMAGE.
  */
 
 int main(int argc, char* argv[]) {
-// ROS node initialization
-ros::init(argc, argv , "xplorer");
-// Object creation of class navigator
-navigator navigator;
-// Function call to run the move function
-navigator.move();
-return 0;
+    // ROS node initialization
+    ros::init(argc, argv , "xplorer");
+    ROS_INFO("xplorer node Initialized");
+    // Object creation of class navigator
+    navigator navigator;
+    // Function call to run the move function
+    navigator.move();
+    ROS_INFO("Turtlebot moving");
+    return 0;
 }
 

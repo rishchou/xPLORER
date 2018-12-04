@@ -3,6 +3,7 @@
  * @author     : Akash Atharv, Rishabh Choudhary
  * @version    : 1.0
  * @Copyright  : 3-Clause BSD
+
 Copyright (c) 2018, Akash Atharv, Rishabh Choudhary
  
 Redistribution and use in source and binary forms, with or without  
@@ -40,16 +41,17 @@ THE POSSIBILITY OF SUCH DAMAGE.
  * @brief Constructor of the class
  */
 obstacleDetector::obstacleDetector() {
-// Collision flag is initialized
+     ROS_INFO("Initializing obstacleDetector");
+     // Initialize collision flag
         collision = false;
-// Laser Scan topic is subscribed
+     // Subscribe to laserScan topic
         sub1 = n1.subscribe("/scan", 1000,
-&obstacleDetector::sensorCallback, this);
-// /Message over dist topic is published
+               &obstacleDetector::sensorCallback, this);
+     // Message over dist topic is published
         disPub1 = n1.advertise<std_msgs::Float64>("/dist", 1000);
-// /dist topic is subscribed
+     // dist topic is subscribed
         disSub1 = n1.subscribe<std_msgs::Float64>("/dist", 1000,
-&obstacleDetector::sensorCallbackDist, this);
+                         &obstacleDetector::sensorCallbackDist, this);
 }
 /**
  * @brief Destructor of the class
@@ -62,16 +64,17 @@ obstacleDetector::~obstacleDetector() {
  * @return void 
  */
 void obstacleDetector::sensorCallback(const sensor_msgs
-::LaserScan::ConstPtr& msg) {
-        float val = 1000;
-        for (const auto& i : msg->ranges) {
-              if (i < val) {
-                    val = i;
-              }
+                               ::LaserScan::ConstPtr& msg) {
+    float val = 1000;
+    for (const auto& i : msg->ranges) {
+        if (i < val) {
+            val = i;
         }
-  std_msgs::Float64 floatVal;
-  floatVal.data = val;
-  disPub1.publish(floatVal);
+    }
+    std_msgs::Float64 floatVal;
+    floatVal.data = val;
+    // Publish minimum distance in the range on /dist topic
+    disPub1.publish(floatVal);
 }
 /**
  * @brief Callback function for /dist topic
@@ -79,13 +82,13 @@ void obstacleDetector::sensorCallback(const sensor_msgs
  * @return void 
  */
 void obstacleDetector::sensorCallbackDist(const std_msgs
-::Float64::ConstPtr& msg) {
-        float val = 1;
-        if ((msg -> data) < val) {
+                                  ::Float64::ConstPtr& msg) {
+    float val = 1;
+    if ((msg -> data) < val) {
         collision = true;
-        } else {
+    } else {
         collision = false;
-        }
+    }
 }
 /**
  * @brief Function for returning value of collision flag

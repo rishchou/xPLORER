@@ -61,21 +61,21 @@ class obstacleDetector {
 
  public:
 /**
- * @brief Constructor
+ * @brief Constructor of the class
  */
     obstacleDetector();
 /**
- * @brief Destructor
+ * @brief Destructor of the class
  */
     ~obstacleDetector();
 /**
- * @brief Callback function for /scan topic
+ * @brief Callback function for subscriber to laserScan messages
  * @param msg Message over the topic /scan
  * @return void 
  */
     void sensorCallback(const sensor_msgs::LaserScan::ConstPtr& msg);
 /**
- * @brief Callback function for /dist topic
+ * @brief Callback function for subscriber to /dist topic
  * @param msg Message over the topic /dist
  * @return void 
  */

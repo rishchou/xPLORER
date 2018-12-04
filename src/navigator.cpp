@@ -36,16 +36,17 @@ THE POSSIBILITY OF SUCH DAMAGE.
  * @brief      : Functional implementation for Robot Navigation functionality
  *============================================================================
  */
+
 #include "../include/xplorer/navigator.hpp"
+
 /**
  * @brief Constructor of the class
  */
 navigator::navigator() {
+      ROS_INFO("Initializing navigator");
 // Publisher initialized for publishing to /cmd_vel_mux/input/navi topic
       pub2 = n2.advertise<geometry_msgs::Twist>
-("/cmd_vel_mux/input/navi", 1000);
-// Subscriber initialized for subscribing to /scan topic
-//      sub = n2.subscribe("/scan", 1000, &Robot::scanCallback, this);
+                     ("/cmd_vel_mux/input/navi", 1000);
 // Initially zero velocities are assigned to the turtlebot
       msg.linear.x = 0.0;
       msg.linear.y = 0.0;
@@ -70,28 +71,30 @@ navigator::~navigator() {
 // Zero Velocity message is sent to turtle bot
       pub2.publish(msg);
 }
+
 /**
  * @brief Function to move the robot
  * @param None
  * @return void
  */
 void navigator::move() {
-// Publishing rate is set up at 10Hz
+     // Publishing rate is set up at 10Hz
       ros::Rate loop_rate(10);
-// Condition to keep running, until ROS functions properly
+     // Condition to keep running, until ROS functions properly
       while (ros::ok()) {
-// Obstacles are checked
+     // Obstacles are checked
            if (obsDet.collisionDetect()) {
-// Collision is expected, Robot is turned
-                ROS_INFO("Collision is expected, Turning to avoid object");
+     // Collision is expected, Robot is turned
+                ROS_WARN("Collision expected, turning to avoid obstacle");
                 msg.linear.x = 0.0;
                 msg.angular.z = 0.5;
-           } /* Collision is expected, Robot is turned*/else {
+           } else {
+                // No obstacle detected, moving straight
                 ROS_INFO("No collision is expected, Moving straight");
                 msg.linear.x = 0.5;
-                msg.angular.z = 0;
+                msg.angular.z = 0.0;
            }
-// The velocity message is published
+     // The  updated velocity message is published
       pub2.publish(msg);
       ros::spinOnce();
       loop_rate.sleep();

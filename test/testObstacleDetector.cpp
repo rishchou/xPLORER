@@ -42,7 +42,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #include "../include/xplorer/navigator.hpp"
 
 /**
- * @brief Test to find if object is initialized and the obstacleDetector program functions properly
+ * @brief Test to find if object is initialized and the obstacleDetector 
+ *        program functions properly
  * @param TESTSuite Gtest framework
  * @param ObstacleDetector_Object_is_initialized Test name
  */
@@ -59,7 +60,7 @@ TEST(TESTSuite, Collision_should_not_be_detected) {
         ros::NodeHandle n4;
         ros::Duration(25).sleep();
         ros::spinOnce();
-        EXPECT_TRUE(~obs.collisionDetect());
+        EXPECT_FALSE(obs.collisionDetect());
 }
 /**
  * @brief Test to find if collision is detected at a particular time
