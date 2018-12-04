@@ -58,7 +58,8 @@ class TestClass {
 }
 };
 /**
- * @brief Test to find if object is initialized and the navigator program functions properly
+ * @brief Test to find if object is initialized and 
+ *        the navigator program functions properly
  * @param TESTSuite Gtest framework
  * @param Navigator_Object_is_initialized Test name
  */
