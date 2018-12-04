@@ -46,16 +46,16 @@ THE POSSIBILITY OF SUCH DAMAGE.
  */
 class TestClass {
  private:
-         geometry_msgs::Twist twist;
+    geometry_msgs::Twist twist;
  public:
 /**
  * @brief Temporary callback function 
  * @param msg Temporary message
  * @return void 
  */
-         void publish(const geometry_msgs::Twist::ConstPtr& msg) {
+    void publish(const geometry_msgs::Twist::ConstPtr& msg) {
          twist = *msg;
-}
+    }
 };
 /**
  * @brief Test to find if object is initialized and 
@@ -71,22 +71,22 @@ TEST(TESTSuite, Navigator_Object_is_initialized) {
  * @param TESTSuite Gtest framework
  * @param Subscribe_Test Test name
  */
-TEST(TESTSuite, Subscribe_Test) {
+TEST(TESTSuite, NavigatorSubscriberTest) {
         ros::NodeHandle n6;
         auto pub = n6.advertise<std_msgs::Float64>("/dist", 1000);
         ros::WallDuration(1).sleep();
-        EXPECT_EQ(pub.getNumSubscribers(), 1);
+        EXPECT_EQ(pub.getNumSubscribers(), 2);
 }
 /**
  * @brief Test to find if publisher for /cmd_vel_mux/input/navi is working
  * @param TESTSuite Gtest framework
  * @param Publish_Test Test name
  */
-TEST(TESTSuite, Publish_Test) {
+TEST(TESTSuite, NavigatorPublisherTest) {
         ros::NodeHandle n7;
         TestClass test;
         navigator navigator;
         auto sub = n7.subscribe("/cmd_vel_mux/input/navi",
-1000, &TestClass::publish, &test);
+                           1000, &TestClass::publish, &test);
         EXPECT_EQ(1, sub.getNumPublishers());
 }
