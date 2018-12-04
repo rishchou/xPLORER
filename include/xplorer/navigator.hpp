@@ -69,7 +69,7 @@ class navigator {
  * @param None
  * @return void
  */
-    void move();
+    void explore();
 };
 
 #endif  // INCLUDE_XPLORER_NAVIGATOR_HPP_
