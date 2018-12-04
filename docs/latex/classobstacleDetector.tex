@@ -1,0 +1,99 @@
+\hypertarget{classobstacleDetector}{}\section{obstacle\+Detector Class Reference}
+\label{classobstacleDetector}\index{obstacle\+Detector@{obstacle\+Detector}}
+
+
+Class for obstacle\+Detection part of the robot.  
+
+
+
+
+{\ttfamily \#include $<$obstacle\+Detector.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classobstacleDetector_a097bd0bdd72d1bc17d167a902f0e85c7}{obstacle\+Detector} ()\hypertarget{classobstacleDetector_a097bd0bdd72d1bc17d167a902f0e85c7}{}\label{classobstacleDetector_a097bd0bdd72d1bc17d167a902f0e85c7}
+
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+\hyperlink{classobstacleDetector_af3e934355f1046a3f235cf680817a590}{$\sim$obstacle\+Detector} ()\hypertarget{classobstacleDetector_af3e934355f1046a3f235cf680817a590}{}\label{classobstacleDetector_af3e934355f1046a3f235cf680817a590}
+
+\begin{DoxyCompactList}\small\item\em Destructor of the class. \end{DoxyCompactList}\item 
+void \hyperlink{classobstacleDetector_ae12f2ef16507c879349cbaafbe4254e1}{sensor\+Callback} (const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&msg)
+\begin{DoxyCompactList}\small\item\em Callback function for subscriber to laser\+Scan messages. \end{DoxyCompactList}\item 
+void \hyperlink{classobstacleDetector_a3adcedcf00c41fc0ba6e8d97e322f0ee}{sensor\+Callback\+Dist} (const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&msg)
+\begin{DoxyCompactList}\small\item\em Callback function for subscriber to /dist topic. \end{DoxyCompactList}\item 
+bool \hyperlink{classobstacleDetector_a90c1101b6e3b4f26251d67793d41bd9c}{collision\+Detect} ()
+\begin{DoxyCompactList}\small\item\em Function for returning value of collision flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for obstacle\+Detection part of the robot. 
+
+\subsection{Member Function Documentation}
+\index{obstacle\+Detector@{obstacle\+Detector}!collision\+Detect@{collision\+Detect}}
+\index{collision\+Detect@{collision\+Detect}!obstacle\+Detector@{obstacle\+Detector}}
+\subsubsection[{\texorpdfstring{collision\+Detect()}{collisionDetect()}}]{\setlength{\rightskip}{0pt plus 5cm}bool obstacle\+Detector\+::collision\+Detect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classobstacleDetector_a90c1101b6e3b4f26251d67793d41bd9c}{}\label{classobstacleDetector_a90c1101b6e3b4f26251d67793d41bd9c}
+
+
+Function for returning value of collision flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool collision flag value 
+\end{DoxyReturn}
+\index{obstacle\+Detector@{obstacle\+Detector}!sensor\+Callback@{sensor\+Callback}}
+\index{sensor\+Callback@{sensor\+Callback}!obstacle\+Detector@{obstacle\+Detector}}
+\subsubsection[{\texorpdfstring{sensor\+Callback(const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&msg)}{sensorCallback(const sensor_msgs::LaserScan::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void obstacle\+Detector\+::sensor\+Callback (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classobstacleDetector_ae12f2ef16507c879349cbaafbe4254e1}{}\label{classobstacleDetector_ae12f2ef16507c879349cbaafbe4254e1}
+
+
+Callback function for subscriber to laser\+Scan messages. 
+
+Callback function for /scan topic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message over the topic /scan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{obstacle\+Detector@{obstacle\+Detector}!sensor\+Callback\+Dist@{sensor\+Callback\+Dist}}
+\index{sensor\+Callback\+Dist@{sensor\+Callback\+Dist}!obstacle\+Detector@{obstacle\+Detector}}
+\subsubsection[{\texorpdfstring{sensor\+Callback\+Dist(const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&msg)}{sensorCallbackDist(const std_msgs::Float64::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void obstacle\+Detector\+::sensor\+Callback\+Dist (
+\begin{DoxyParamCaption}
+\item[{const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classobstacleDetector_a3adcedcf00c41fc0ba6e8d97e322f0ee}{}\label{classobstacleDetector_a3adcedcf00c41fc0ba6e8d97e322f0ee}
+
+
+Callback function for subscriber to /dist topic. 
+
+Callback function for /dist topic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message over the topic /dist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/rishchou/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/include/xplorer/\hyperlink{obstacleDetector_8hpp}{obstacle\+Detector.\+hpp}\item 
+/home/rishchou/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/src/\hyperlink{obstacleDetector_8cpp}{obstacle\+Detector.\+cpp}\end{DoxyCompactItemize}

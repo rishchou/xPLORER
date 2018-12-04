@@ -1,0 +1,111 @@
+\hypertarget{testObstacleDetector_8cpp}{}\section{/home/rishchou/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/test/test\+Obstacle\+Detector.cpp File Reference}
+\label{testObstacleDetector_8cpp}\index{/home/rishchou/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/test/test\+Obstacle\+Detector.\+cpp@{/home/rishchou/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/test/test\+Obstacle\+Detector.\+cpp}}
+
+
+\subsection*{\+: Test file for testing class \hyperlink{classobstacleDetector}{obstacle\+Detector} } 
+
+
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/xplorer/obstacle\+Detector.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/xplorer/navigator.\+hpp\char`\"{}}\\*
+Include dependency graph for test\+Obstacle\+Detector.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{testObstacleDetector_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{testObstacleDetector_8cpp_a37b97005e72f34de8abedb5c5ade832a}{T\+E\+ST} (T\+E\+S\+T\+Suite, Obstacle\+Detector\+\_\+\+Object\+\_\+is\+\_\+initialized)
+\begin{DoxyCompactList}\small\item\em Test to find if object is initialized and the \hyperlink{classobstacleDetector}{obstacle\+Detector} program functions properly. \end{DoxyCompactList}\item 
+\hyperlink{testObstacleDetector_8cpp_a278e5d4795cf273fb11e60d147ad0f36}{T\+E\+ST} (T\+E\+S\+T\+Suite, Collision\+\_\+should\+\_\+not\+\_\+be\+\_\+detected)
+\begin{DoxyCompactList}\small\item\em Test to find if collision is not detected at a particular time. \end{DoxyCompactList}\item 
+\hyperlink{testObstacleDetector_8cpp_a49669a17f3daac997dcfaa2fd64a8337}{T\+E\+ST} (T\+E\+S\+T\+Suite, Collision\+\_\+should\+\_\+be\+\_\+detected)
+\begin{DoxyCompactList}\small\item\em Test to find if collision is detected at a particular time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsection*{\+: Test file for testing class \hyperlink{classobstacleDetector}{obstacle\+Detector} }
+
+============================================================================
+
+\begin{DoxyAuthor}{Author}
+\+: Akash Atharv, Rishabh Choudhary 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+\+: 1.\+0  \+: 3-\/\+Clause B\+SD Copyright (c) 2018, Akash Atharv, Rishabh Choudhary
+\end{DoxyVersion}
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S 
+\+I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 
+
+\subsection{Function Documentation}
+\index{test\+Obstacle\+Detector.\+cpp@{test\+Obstacle\+Detector.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Obstacle\+Detector.\+cpp@{test\+Obstacle\+Detector.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+T\+E\+S\+T\+Suite, Obstacle\+Detector\+\_\+\+Object\+\_\+is\+\_\+initialized)}{TEST(TESTSuite, ObstacleDetector_Object_is_initialized)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{T\+E\+S\+T\+Suite}]{, }
+\item[{Obstacle\+Detector\+\_\+\+Object\+\_\+is\+\_\+initialized}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{testObstacleDetector_8cpp_a37b97005e72f34de8abedb5c5ade832a}{}\label{testObstacleDetector_8cpp_a37b97005e72f34de8abedb5c5ade832a}
+
+
+Test to find if object is initialized and the \hyperlink{classobstacleDetector}{obstacle\+Detector} program functions properly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+E\+S\+T\+Suite} & Gtest framework \\
+\hline
+{\em Obstacle\+Detector\+\_\+\+Object\+\_\+is\+\_\+initialized} & Test name \\
+\hline
+\end{DoxyParams}
+\index{test\+Obstacle\+Detector.\+cpp@{test\+Obstacle\+Detector.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Obstacle\+Detector.\+cpp@{test\+Obstacle\+Detector.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+T\+E\+S\+T\+Suite, Collision\+\_\+should\+\_\+not\+\_\+be\+\_\+detected)}{TEST(TESTSuite, Collision_should_not_be_detected)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{T\+E\+S\+T\+Suite}]{, }
+\item[{Collision\+\_\+should\+\_\+not\+\_\+be\+\_\+detected}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{testObstacleDetector_8cpp_a278e5d4795cf273fb11e60d147ad0f36}{}\label{testObstacleDetector_8cpp_a278e5d4795cf273fb11e60d147ad0f36}
+
+
+Test to find if collision is not detected at a particular time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+E\+S\+T\+Suite} & Gtest framework \\
+\hline
+{\em Collision\+\_\+should\+\_\+not\+\_\+be\+\_\+detected} & Test name \\
+\hline
+\end{DoxyParams}
+\index{test\+Obstacle\+Detector.\+cpp@{test\+Obstacle\+Detector.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Obstacle\+Detector.\+cpp@{test\+Obstacle\+Detector.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+T\+E\+S\+T\+Suite, Collision\+\_\+should\+\_\+be\+\_\+detected)}{TEST(TESTSuite, Collision_should_be_detected)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{T\+E\+S\+T\+Suite}]{, }
+\item[{Collision\+\_\+should\+\_\+be\+\_\+detected}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{testObstacleDetector_8cpp_a49669a17f3daac997dcfaa2fd64a8337}{}\label{testObstacleDetector_8cpp_a49669a17f3daac997dcfaa2fd64a8337}
+
+
+Test to find if collision is detected at a particular time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+E\+S\+T\+Suite} & Gtest framework \\
+\hline
+{\em Collision\+\_\+should\+\_\+be\+\_\+detected} & Test name \\
+\hline
+\end{DoxyParams}
