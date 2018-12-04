@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 ---
 
-## Project Decription
+## Project Overview
 
 One of the most popular research problems in robotics now-a-days is to
 capture behavior of a robot in an unknown environment. We aim to develop a similar product using the turtlebot
@@ -16,15 +16,24 @@ robots to explore unmanned spaces and difficult terrains like mines etc. and cre
 potential hazards or safe navigation. It will also help in creating 3D models of commercial spaces for virtual tours
 etc. without any human intervention.
 
+xPLORER is an exploration Robot by Acme Robotics which works in an unknown indoor environment and generates a real time 3D map of the region as it traverses the whole environment and keeps on extending the map to develop a 3D octomap of the enviroment. It used turtlebot package on gazebo to simulate the exploration in a custom indoor world and octomap package to integrate the 3D mapping.  
+
 ## Authors
 
 Sprint 1:
 - Driver - Rishabh Choudhary
 - Navigator - Akash Atharv
 
+Sprint 2:
+- Driver - Akash Atharv
+- Navigator - Rishabh Choudhary
+
+## Project Workflow
+The activity diagram shown below explains the working of the project. 
+
 ## Dependencies
 
-The project requires ROS kinetic, catkin, Gazebo and the TurtleBot package and it is developed on UBUNTU 16.04 LTS. 
+The project requires ROS kinetic, catkin, Gazebo, TurtleBot and octomap packages and it is developed on UBUNTU 16.04 LTS. 
 
 To install ROS kinetic, please follow the tutorial on: 
 http://wiki.ros.org/kinetic/Installation/Ubuntu
@@ -43,6 +52,12 @@ sudo apt-get install ros-kinetic-turtlebot-gazebo
 sudo apt-get install ros-kinetic-turtlebot-apps
 sudo apt-get install ros-kinetic-turtlebot-rviz-launchers
 ```
+
+To install octomap package, use the given command 
+```
+sudo apt-get install ros-kinetic-octomap
+```
+
 ## SIP (Solo Iterative Process)
  
 This project was developed following pair programming concepts and SIP. The estimated and completed tasks have been stored in the form of product backlog, Iteration backlog and work log to include the specifics of each task. The product backlog contains the set of all of the tasks to be completed for the given feature implementation. The iteration backlog includes tasks that were repeated over the course of Sprint.
@@ -58,10 +73,88 @@ Sprint notes can be found [at](https://docs.google.com/document/d/1vihsMah5-x3lx
 - [x] Update SIP Logs
 
 ## Operation/Demo steps
-To be updated
 
-## Dependencies
-To be updated
+### Build the project
+To build the given project, follow the steps below:
+```
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/
+catkin_make
+source devel/setup.bash
+cd src/
+git clone --recursive https://github.com/rishchou/xPLORER.git
+cd ..
+catkin_make
+```
+
+### Run the demo
+
+To run the demo, follow the given steps:
+```
+cd ~/catkin_ws
+source devel/setup.bash
+roslaunch xplorer demo.launch
+```
+
+This will open up a set of windows and terminals used to simulate the demo as shown below. A gazebo window will open up showing turtlebot moving in a custom world. There is a terminal window which shows the status of the bot alignment and whether any obstacles are detected. 
+The rviz window shows the actual 3D map generation using octomap in real time as the bot moves in the indoor environment. 
+
+## Save the generated map
+
+## View the generated map
+
+The generated map can be used further for autonomous navigation and other applications. To view the generated map you need to install octovis. To install octovis enter the following command:
+```
+sudo apt-get install ros-kinetic-octovis
+```
+
+Now, to view the generated map enter the following command.
+```
+octovis <path_to_map_file>
+```
+
+## ROSBAG 
+
+The demo.launch file has a feature of recording the rosbag for all topics except /camera topic. To record a rosbag while running the demo enter the given command in a new terminal.
+```
+source ~/catkin_ws/devel/setup.bash
+roslaunch xplorer demo.launch record:=true
+```
+
+This will record a bag file for the simulation for default 30 secs. You can change the duration of recorded bad file by using the record_time parameter with launch file above.
+
+The recorded rosbag will be stored in the results directory of the repository.
+
+## Playing the BAG file
+
+To play the ROSBAG file, go to the results directory and enter the following command.
+
+```
+cd <path_to_repo>/results
+rosbag play xplorer.bag
+```
+
+## Running ROStest
+
+Unit tests have been written for each class to test the functionality and interface using gtest and rostest. To run rostest follow the given steps:
+
+```
+cd ~/catkin_ws
+catkin_make run_tests_xplorer
+```
+
+## Doxygen Documentation 
+
+The doxygen generated documents have been added to the docs folder of the repository. A config file has been added to docs folder to generate the documentation.
+
+To generate the doxygen documentation, use the following commands.
+
+```
+cd <path_to_repository>/docs
+doxygen xplorer.config
+```
+
+## Code Coverage
 
 ## Known issues/ bugs
 To be updated
