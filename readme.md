@@ -31,7 +31,7 @@ Sprint 2:
 ## Project Workflow
 The activity diagram shown below explains the working of the project. 
 <p align="center">
-  <img width="460" height="800" src="https://github.com/rishchou/xPLORER/blob/master/UML/Revised/Activity_Diagram.png">
+  <img width="700" height="800" src="https://github.com/rishchou/xPLORER/blob/master/UML/Revised/Activity_Diagram.png">
 </p>
 ## Dependencies
 
@@ -102,7 +102,7 @@ This will open up a set of windows and terminals used to simulate the demo as sh
 The rviz window shows the actual 3D map generation using octomap in real time as the bot moves in the indoor environment. 
 
 <p align="center">
-  <img width="460" height="800" src="https://github.com/rishchou/xPLORER/blob/master/results/demo.png">
+  <img width="600" height="400" src="https://github.com/rishchou/xPLORER/blob/master/results/demo.png">
 </p>
 
 ## Save the generated map
