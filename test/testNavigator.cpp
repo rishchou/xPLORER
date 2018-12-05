@@ -75,7 +75,7 @@ TEST(TESTSuite, NavigatorSubscriberTest) {
         ros::NodeHandle n6;
         auto pub = n6.advertise<std_msgs::Float64>("/dist", 1000);
         ros::WallDuration(1).sleep();
-        EXPECT_EQ(pub.getNumSubscribers(), 2);
+        EXPECT_EQ(pub.getNumSubscribers(), 1);
 }
 /**
  * @brief Test to find if publisher for /cmd_vel_mux/input/navi is working
