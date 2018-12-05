@@ -58,7 +58,7 @@ TEST(TESTSuite, ObstacleDetector_Object_is_initialized) {
 TEST(TESTSuite, Collision_should_not_be_detected) {
         obstacleDetector obs;
         ros::NodeHandle n4;
-        ros::Duration(25).sleep();
+        ros::WallDuration(25).sleep();
         ros::spinOnce();
         EXPECT_FALSE(obs.collisionDetect());
 }
@@ -70,7 +70,7 @@ TEST(TESTSuite, Collision_should_not_be_detected) {
 TEST(TESTSuite, Collision_should_be_detected) {
         obstacleDetector obs;
         ros::NodeHandle n5;
-        ros::Duration(6).sleep();
+        ros::WallDuration(6).sleep();
         ros::spinOnce();
         EXPECT_TRUE(obs.collisionDetect());
 }
