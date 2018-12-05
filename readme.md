@@ -30,7 +30,9 @@ Sprint 2:
 
 ## Project Workflow
 The activity diagram shown below explains the working of the project. 
-
+<p align="center">
+  <img width="460" height="800" src="https://github.com/rishchou/xPLORER/blob/master/UML/Revised/Activity_Diagram.png">
+</p>
 ## Dependencies
 
 The project requires ROS kinetic, catkin, Gazebo, TurtleBot and octomap packages and it is developed on UBUNTU 16.04 LTS. 
@@ -98,6 +100,10 @@ roslaunch xplorer demo.launch
 
 This will open up a set of windows and terminals used to simulate the demo as shown below. A gazebo window will open up showing turtlebot moving in a custom world. There is a terminal window which shows the status of the bot alignment and whether any obstacles are detected. 
 The rviz window shows the actual 3D map generation using octomap in real time as the bot moves in the indoor environment. 
+
+<p align="center">
+  <img width="460" height="800" src="https://github.com/rishchou/xPLORER/blob/master/results/demo.png">
+</p>
 
 ## Save the generated map
 
