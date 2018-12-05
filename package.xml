@@ -65,6 +65,8 @@
   <build_export_depend>geometry_msgs</build_export_depend>
   <build_export_depend>sensor_msgs</build_export_depend>
   <build_export_depend>rostest</build_export_depend>
+  <build_export_depend>lcov</build_export_depend>
+  <build_export_depend>curl</build_export_depend>
   
 
   <exec_depend>roscpp</exec_depend>
@@ -73,6 +75,8 @@
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>sensor_msgs</exec_depend> 
   <exec_depend>rostest</exec_depend>
+  <exec_depend>lcov</exec_depend>
+  <exec_depend>curl</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
