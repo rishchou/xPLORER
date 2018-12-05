@@ -62,15 +62,3 @@ TEST(TESTSuite, Collision_should_not_be_detected) {
         ros::spinOnce();
         EXPECT_FALSE(obs.collisionDetect());
 }
-/**
- * @brief Test to find if collision is detected at a particular time
- * @param TESTSuite Gtest framework
- * @param Collision_should_be_detected Test name
- */
-TEST(TESTSuite, Collision_should_be_detected) {
-        obstacleDetector obs;
-        ros::NodeHandle n5;
-        ros::WallDuration(7).sleep();
-        ros::spinOnce();
-        EXPECT_TRUE(obs.collisionDetect());
-}
