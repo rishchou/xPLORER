@@ -67,7 +67,7 @@ TEST(TESTSuite, Navigator_Object_is_initialized) {
         EXPECT_NO_FATAL_FAILURE(navigator navigator);
 }
 /**
- * @brief Test to find if publisher for /cmd_vel_mux/input/navi is working
+ * @brief Test to find if publisher for /mobile_base/commands/velocity is working
  * @param TESTSuite Gtest framework
  * @param Publish_Test Test name
  */
@@ -75,7 +75,7 @@ TEST(TESTSuite, NavigatorPublisherTest) {
         ros::NodeHandle n7;
         TestClass test;
         navigator navigator;
-        auto sub = n7.subscribe("/cmd_vel_mux/input/navi",
+        auto sub = n7.subscribe("/mobile_base/commands/velocity",
                            1000, &TestClass::publish, &test);
         EXPECT_EQ(1, sub.getNumPublishers());
 }

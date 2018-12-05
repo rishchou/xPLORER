@@ -44,9 +44,9 @@ THE POSSIBILITY OF SUCH DAMAGE.
  */
 navigator::navigator() {
       ROS_INFO("Initializing navigator");
-// Publisher initialized for publishing to /cmd_vel_mux/input/navi topic
+// Publisher initialized for publishing to /mobile_base/commands/velocity topic
       pub2 = n2.advertise<geometry_msgs::Twist>
-                     ("/cmd_vel_mux/input/navi", 1000);
+                     ("/mobile_base/commands/velocity", 1000);
 // Initially zero velocities are assigned to the turtlebot
       msg.linear.x = 0.0;
       msg.linear.y = 0.0;
