@@ -46,9 +46,8 @@ find_package(octomap REQUIRED)
 
 if(CATKIN_ENABLE_TESTING)
   find_package(rostest REQUIRED)
-  add_rostest_gtest(testxplorer launch/test.launch test/main.cpp test/testNavigator.cpp test/testObstacleDetector.cpp)
+  add_rostest_gtest(testxplorer launch/test.launch test/main.cpp test/testNavigator.cpp test/testObstacleDetector.cpp src/navigator.cpp src/ostacleDetector.cpp)
   target_link_libraries(testxplorer ${catkin_LIBRARIES})
-  add_dependencies(testxplorer xplorer ${catkin_EXPORTED_TARGETS})
 endif()
 
 if (ROS_CI_COVERALLS)
