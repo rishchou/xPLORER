@@ -70,7 +70,7 @@ TEST(TESTSuite, Collision_should_not_be_detected) {
 TEST(TESTSuite, Collision_should_be_detected) {
         obstacleDetector obs;
         ros::NodeHandle n5;
-        ros::WallDuration(6).sleep();
+        ros::WallDuration(7).sleep();
         ros::spinOnce();
         EXPECT_TRUE(obs.collisionDetect());
 }
