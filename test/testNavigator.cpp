@@ -79,3 +79,14 @@ TEST(TESTSuite, NavigatorPublisherTest) {
                            1000, &TestClass::publish, &test);
         EXPECT_EQ(1, sub.getNumPublishers());
 }
+/**
+ * @brief Test to find if subscriber for /dist is working
+ * @param TESTSuite Gtest framework
+ * @param Subscribe_Test Test name
+ */
+TEST(TESTSuite, NavigatorSubscriberTest) {
+        ros::NodeHandle n6;
+        auto pub3 = n6.advertise<std_msgs::Float64>("/dist", 1000);
+        ros::WallDuration(1).sleep();
+        EXPECT_EQ(pub3.getNumSubscribers(), 1);
+}
