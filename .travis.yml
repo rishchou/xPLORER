@@ -27,7 +27,7 @@ before_script:
   - echo TRAVIS_JOB_ID >> .ci_config/industrial_ci/src/docker.env
   
 script: 
-  - sudo apt-get install ros-kinetic-turtlebot*
+  - sudo apt-get install ros-kinetic-turtlebot-gazebo ros-kinetic-turtlebot-apps ros-kinetic-turtlebot-rviz-launchers
   - source .ci_config/travis.sh
 
 #  - source ./travis.sh  # Enable this when you have a package-local script 
