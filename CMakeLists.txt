@@ -19,10 +19,9 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package()
 
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
-include(CodeCoverage)
-set(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage -fno-inline -fno-inline-small-functions -fno-default-inline")
-set(CMAKE_EXE_LINKER_FLAGS "-fprofile-arcs -ftest-coverage -fno-inline -fno-inline-small-functions -fno-default-inline")
-setup_target_for_coverage(code_coverage testxplorer coverage)
+#set(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage -fno-inline -fno-inline-small-functions -fno-default-inline")
+#set(CMAKE_EXE_LINKER_FLAGS "-fprofile-arcs -ftest-coverage -fno-inline -fno-inline-small-functions -fno-default-inline")
+#setup_target_for_coverage(code_coverage testxplorer coverage)
 
 # Coveralls support
 option(ROS_CI_COVERALLS "Turn on coveralls support" OFF)
