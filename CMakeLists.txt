@@ -24,8 +24,8 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 #setup_target_for_coverage(code_coverage testxplorer coverage)
 
 # Coveralls support
-option(ROS_CI_COVERALLS "Turn on coveralls support" OFF)
-option(ROS_CI_COVERALLS_UPLOAD "Upload the generated coveralls json" OFF)
+option(ROS_CI_COVERALLS "Turn on coveralls support" ON)
+option(ROS_CI_COVERALLS_UPLOAD "Upload the generated coveralls json" ON)
 
 if($ENV{ROS_CI_COVERAGE})
   set(CMAKE_BUILD_TYPE Debug)
