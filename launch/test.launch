@@ -1,9 +1,9 @@
 <launch>
-
-    <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
-           <arg name="world_file" value ="$(find xplorer)/rviz/xPLORER.sdf"/>
-           <arg name="gui" value = "0"/>
-    </include>
+    <node 
+        pkg = "rosbag"
+        type="play" 
+        name="player" 
+        args="--clock -l $(find xplorer)/results/xplorer.bag"
     <node
         pkg = "xplorer"
         name = "xplorer"
