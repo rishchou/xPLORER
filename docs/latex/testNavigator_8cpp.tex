@@ -1,5 +1,5 @@
-\hypertarget{testNavigator_8cpp}{}\section{/home/rishchou/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/test/test\+Navigator.cpp File Reference}
-\label{testNavigator_8cpp}\index{/home/rishchou/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/test/test\+Navigator.\+cpp@{/home/rishchou/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/test/test\+Navigator.\+cpp}}
+\hypertarget{testNavigator_8cpp}{}\section{/home/akash/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/test/test\+Navigator.cpp File Reference}
+\label{testNavigator_8cpp}\index{/home/akash/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/test/test\+Navigator.\+cpp@{/home/akash/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/test/test\+Navigator.\+cpp}}
 
 
 \subsection*{\+: Test file for testing class Navigator } 
@@ -25,12 +25,14 @@ class \hyperlink{classTestClass}{Test\+Class}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{testNavigator_8cpp_add6a60bde115ffbd1647430b94f96652}{T\+E\+ST} (T\+E\+S\+T\+Suite, Navigator\+\_\+\+Object\+\_\+is\+\_\+initialized)
+\hyperlink{testNavigator_8cpp_aaa6d5c559f5ac48e4423417c763ac8ca}{T\+E\+ST} (Navigator\+Component\+Test, Navigator\+\_\+\+Object\+\_\+is\+\_\+initialized)
 \begin{DoxyCompactList}\small\item\em Test to find if object is initialized and the navigator program functions properly. \end{DoxyCompactList}\item 
-\hyperlink{testNavigator_8cpp_a11f00b16e497a566a04124d68d7e6a3f}{T\+E\+ST} (T\+E\+S\+T\+Suite, Subscribe\+\_\+\+Test)
+\hyperlink{testNavigator_8cpp_a5a3668d78e02d65d8c265ac6503eda58}{T\+E\+ST} (Navigator\+Component\+Test, Navigator\+Publisher\+Test)
+\begin{DoxyCompactList}\small\item\em Test to find if publisher for /mobile\+\_\+base/commands/velocity is working. \end{DoxyCompactList}\item 
+\hyperlink{testNavigator_8cpp_a87601526f6eb07bcd540b0c8604e776a}{T\+E\+ST} (Navigator\+Component\+Test, Navigator\+Subscriber\+Test)
 \begin{DoxyCompactList}\small\item\em Test to find if subscriber for /dist is working. \end{DoxyCompactList}\item 
-\hyperlink{testNavigator_8cpp_a7f2712d948670bafdfd513dc82bd1698}{T\+E\+ST} (T\+E\+S\+T\+Suite, Publish\+\_\+\+Test)
-\begin{DoxyCompactList}\small\item\em Test to find if publisher for /cmd\+\_\+vel\+\_\+mux/input/navi is working. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{testNavigator_8cpp_a5e7522796d7b492cf2d71a2e093801cd}{T\+E\+ST} (Navigator\+Component\+Test, Robot\+Navigator\+Test)
+\begin{DoxyCompactList}\small\item\em Test to find if the main function for robot movement is working. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -59,58 +61,77 @@ T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\
 \subsection{Function Documentation}
 \index{test\+Navigator.\+cpp@{test\+Navigator.\+cpp}!T\+E\+ST@{T\+E\+ST}}
 \index{T\+E\+ST@{T\+E\+ST}!test\+Navigator.\+cpp@{test\+Navigator.\+cpp}}
-\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+T\+E\+S\+T\+Suite, Navigator\+\_\+\+Object\+\_\+is\+\_\+initialized)}{TEST(TESTSuite, Navigator_Object_is_initialized)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Navigator\+Component\+Test, Navigator\+\_\+\+Object\+\_\+is\+\_\+initialized)}{TEST(NavigatorComponentTest, Navigator_Object_is_initialized)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
 \begin{DoxyParamCaption}
-\item[{T\+E\+S\+T\+Suite}]{, }
+\item[{Navigator\+Component\+Test}]{, }
 \item[{Navigator\+\_\+\+Object\+\_\+is\+\_\+initialized}]{}
 \end{DoxyParamCaption}
-)}\hypertarget{testNavigator_8cpp_add6a60bde115ffbd1647430b94f96652}{}\label{testNavigator_8cpp_add6a60bde115ffbd1647430b94f96652}
+)}\hypertarget{testNavigator_8cpp_aaa6d5c559f5ac48e4423417c763ac8ca}{}\label{testNavigator_8cpp_aaa6d5c559f5ac48e4423417c763ac8ca}
 
 
 Test to find if object is initialized and the navigator program functions properly. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em T\+E\+S\+T\+Suite} & Gtest framework \\
+{\em Navigator\+Component\+Test} & Gtest framework \\
 \hline
 {\em Navigator\+\_\+\+Object\+\_\+is\+\_\+initialized} & Test name \\
 \hline
 \end{DoxyParams}
 \index{test\+Navigator.\+cpp@{test\+Navigator.\+cpp}!T\+E\+ST@{T\+E\+ST}}
 \index{T\+E\+ST@{T\+E\+ST}!test\+Navigator.\+cpp@{test\+Navigator.\+cpp}}
-\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+T\+E\+S\+T\+Suite, Subscribe\+\_\+\+Test)}{TEST(TESTSuite, Subscribe_Test)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Navigator\+Component\+Test, Navigator\+Publisher\+Test)}{TEST(NavigatorComponentTest, NavigatorPublisherTest)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
 \begin{DoxyParamCaption}
-\item[{T\+E\+S\+T\+Suite}]{, }
-\item[{Subscribe\+\_\+\+Test}]{}
+\item[{Navigator\+Component\+Test}]{, }
+\item[{Navigator\+Publisher\+Test}]{}
 \end{DoxyParamCaption}
-)}\hypertarget{testNavigator_8cpp_a11f00b16e497a566a04124d68d7e6a3f}{}\label{testNavigator_8cpp_a11f00b16e497a566a04124d68d7e6a3f}
+)}\hypertarget{testNavigator_8cpp_a5a3668d78e02d65d8c265ac6503eda58}{}\label{testNavigator_8cpp_a5a3668d78e02d65d8c265ac6503eda58}
+
+
+Test to find if publisher for /mobile\+\_\+base/commands/velocity is working. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Navigator\+Component\+Test} & Gtest framework \\
+\hline
+{\em Publish\+\_\+\+Test} & Test name \\
+\hline
+\end{DoxyParams}
+\index{test\+Navigator.\+cpp@{test\+Navigator.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Navigator.\+cpp@{test\+Navigator.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Navigator\+Component\+Test, Navigator\+Subscriber\+Test)}{TEST(NavigatorComponentTest, NavigatorSubscriberTest)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Navigator\+Component\+Test}]{, }
+\item[{Navigator\+Subscriber\+Test}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{testNavigator_8cpp_a87601526f6eb07bcd540b0c8604e776a}{}\label{testNavigator_8cpp_a87601526f6eb07bcd540b0c8604e776a}
 
 
 Test to find if subscriber for /dist is working. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em T\+E\+S\+T\+Suite} & Gtest framework \\
+{\em Navigator\+Component\+Test} & Gtest framework \\
 \hline
 {\em Subscribe\+\_\+\+Test} & Test name \\
 \hline
 \end{DoxyParams}
 \index{test\+Navigator.\+cpp@{test\+Navigator.\+cpp}!T\+E\+ST@{T\+E\+ST}}
 \index{T\+E\+ST@{T\+E\+ST}!test\+Navigator.\+cpp@{test\+Navigator.\+cpp}}
-\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+T\+E\+S\+T\+Suite, Publish\+\_\+\+Test)}{TEST(TESTSuite, Publish_Test)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Navigator\+Component\+Test, Robot\+Navigator\+Test)}{TEST(NavigatorComponentTest, RobotNavigatorTest)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
 \begin{DoxyParamCaption}
-\item[{T\+E\+S\+T\+Suite}]{, }
-\item[{Publish\+\_\+\+Test}]{}
+\item[{Navigator\+Component\+Test}]{, }
+\item[{Robot\+Navigator\+Test}]{}
 \end{DoxyParamCaption}
-)}\hypertarget{testNavigator_8cpp_a7f2712d948670bafdfd513dc82bd1698}{}\label{testNavigator_8cpp_a7f2712d948670bafdfd513dc82bd1698}
+)}\hypertarget{testNavigator_8cpp_a5e7522796d7b492cf2d71a2e093801cd}{}\label{testNavigator_8cpp_a5e7522796d7b492cf2d71a2e093801cd}
 
 
-Test to find if publisher for /cmd\+\_\+vel\+\_\+mux/input/navi is working. 
+Test to find if the main function for robot movement is working. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em T\+E\+S\+T\+Suite} & Gtest framework \\
+{\em Navigator\+Component\+Test} & Gtest framework \\
 \hline
-{\em Publish\+\_\+\+Test} & Test name \\
+{\em Robot\+Navigator\+Test} & Test name \\
 \hline
 \end{DoxyParams}

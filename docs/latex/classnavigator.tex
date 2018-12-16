@@ -9,60 +9,53 @@ Class for navigation part of the robot.
 
 {\ttfamily \#include $<$navigator.\+hpp$>$}
 
+
+
+Collaboration diagram for navigator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classnavigator__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classnavigator_a56f8f7c47b89e2496a6c95155f163f4a}{navigator} ()
+\hyperlink{classnavigator_a56f8f7c47b89e2496a6c95155f163f4a}{navigator} ()\hypertarget{classnavigator_a56f8f7c47b89e2496a6c95155f163f4a}{}\label{classnavigator_a56f8f7c47b89e2496a6c95155f163f4a}
+
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-\hyperlink{classnavigator_a3f3e027d3b440b100426abb9aba16b5e}{$\sim$navigator} ()
+\hyperlink{classnavigator_a3f3e027d3b440b100426abb9aba16b5e}{$\sim$navigator} ()\hypertarget{classnavigator_a3f3e027d3b440b100426abb9aba16b5e}{}\label{classnavigator_a3f3e027d3b440b100426abb9aba16b5e}
+
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
-void \hyperlink{classnavigator_a0a766813f247cc35bb6ae0cb5eefdba9}{move} ()
+void \hyperlink{classnavigator_abe0798d499bb9cbd606fa5a398c863cb}{explore} (int flag)
 \begin{DoxyCompactList}\small\item\em Function to move the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classobstacleDetector}{obstacle\+Detector} {\bfseries obs\+Det}\hypertarget{classnavigator_adf30c28ffd5b02114e7ff429afed9892}{}\label{classnavigator_adf30c28ffd5b02114e7ff429afed9892}
+
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Class for navigation part of the robot. 
 
-\subsection{Constructor \& Destructor Documentation}
-\index{navigator@{navigator}!navigator@{navigator}}
-\index{navigator@{navigator}!navigator@{navigator}}
-\subsubsection[{\texorpdfstring{navigator()}{navigator()}}]{\setlength{\rightskip}{0pt plus 5cm}navigator\+::navigator (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classnavigator_a56f8f7c47b89e2496a6c95155f163f4a}{}\label{classnavigator_a56f8f7c47b89e2496a6c95155f163f4a}
-
-
-Constructor. 
-
-Constructor of the class. \index{navigator@{navigator}!````~navigator@{$\sim$navigator}}
-\index{````~navigator@{$\sim$navigator}!navigator@{navigator}}
-\subsubsection[{\texorpdfstring{$\sim$navigator()}{~navigator()}}]{\setlength{\rightskip}{0pt plus 5cm}navigator\+::$\sim$navigator (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{classnavigator_a3f3e027d3b440b100426abb9aba16b5e}{}\label{classnavigator_a3f3e027d3b440b100426abb9aba16b5e}
-
-
-Destructor. 
-
-Destructor of the class. 
-
 \subsection{Member Function Documentation}
-\index{navigator@{navigator}!move@{move}}
-\index{move@{move}!navigator@{navigator}}
-\subsubsection[{\texorpdfstring{move()}{move()}}]{\setlength{\rightskip}{0pt plus 5cm}void navigator\+::move (
+\index{navigator@{navigator}!explore@{explore}}
+\index{explore@{explore}!navigator@{navigator}}
+\subsubsection[{\texorpdfstring{explore(int flag)}{explore(int flag)}}]{\setlength{\rightskip}{0pt plus 5cm}void navigator\+::explore (
 \begin{DoxyParamCaption}
-{}
+\item[{int}]{flag}
 \end{DoxyParamCaption}
-)}\hypertarget{classnavigator_a0a766813f247cc35bb6ae0cb5eefdba9}{}\label{classnavigator_a0a766813f247cc35bb6ae0cb5eefdba9}
+)}\hypertarget{classnavigator_abe0798d499bb9cbd606fa5a398c863cb}{}\label{classnavigator_abe0798d499bb9cbd606fa5a398c863cb}
 
 
 Function to move the robot. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em None} & \\
+{\em flag} & for operation \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -72,5 +65,5 @@ void
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/rishchou/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/include/xplorer/\hyperlink{navigator_8hpp}{navigator.\+hpp}\item 
-/home/rishchou/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/src/\hyperlink{navigator_8cpp}{navigator.\+cpp}\end{DoxyCompactItemize}
+/home/akash/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/include/xplorer/\hyperlink{navigator_8hpp}{navigator.\+hpp}\item 
+/home/akash/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/src/\hyperlink{navigator_8cpp}{navigator.\+cpp}\end{DoxyCompactItemize}

@@ -23,7 +23,9 @@ void \hyperlink{classobstacleDetector_ae12f2ef16507c879349cbaafbe4254e1}{sensor\
 void \hyperlink{classobstacleDetector_a3adcedcf00c41fc0ba6e8d97e322f0ee}{sensor\+Callback\+Dist} (const std\+\_\+msgs\+::\+Float64\+::\+Const\+Ptr \&msg)
 \begin{DoxyCompactList}\small\item\em Callback function for subscriber to /dist topic. \end{DoxyCompactList}\item 
 bool \hyperlink{classobstacleDetector_a90c1101b6e3b4f26251d67793d41bd9c}{collision\+Detect} ()
-\begin{DoxyCompactList}\small\item\em Function for returning value of collision flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function for returning value of collision flag. \end{DoxyCompactList}\item 
+void \hyperlink{classobstacleDetector_a829f311abfd9ece59f9f02b587048d6a}{set\+Flag} (bool val)
+\begin{DoxyCompactList}\small\item\em Function for manually setting collision flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -60,8 +62,6 @@ bool collision flag value
 
 Callback function for subscriber to laser\+Scan messages. 
 
-Callback function for /scan topic.
-
 
 \begin{DoxyParams}{Parameters}
 {\em msg} & Message over the topic /scan \\
@@ -81,11 +81,28 @@ void
 
 Callback function for subscriber to /dist topic. 
 
-Callback function for /dist topic.
-
 
 \begin{DoxyParams}{Parameters}
 {\em msg} & Message over the topic /dist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{obstacle\+Detector@{obstacle\+Detector}!set\+Flag@{set\+Flag}}
+\index{set\+Flag@{set\+Flag}!obstacle\+Detector@{obstacle\+Detector}}
+\subsubsection[{\texorpdfstring{set\+Flag(bool val)}{setFlag(bool val)}}]{\setlength{\rightskip}{0pt plus 5cm}void obstacle\+Detector\+::set\+Flag (
+\begin{DoxyParamCaption}
+\item[{bool}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{classobstacleDetector_a829f311abfd9ece59f9f02b587048d6a}{}\label{classobstacleDetector_a829f311abfd9ece59f9f02b587048d6a}
+
+
+Function for manually setting collision flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & flag value \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -95,5 +112,5 @@ void
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/rishchou/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/include/xplorer/\hyperlink{obstacleDetector_8hpp}{obstacle\+Detector.\+hpp}\item 
-/home/rishchou/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/src/\hyperlink{obstacleDetector_8cpp}{obstacle\+Detector.\+cpp}\end{DoxyCompactItemize}
+/home/akash/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/include/xplorer/\hyperlink{obstacleDetector_8hpp}{obstacle\+Detector.\+hpp}\item 
+/home/akash/catkin\+\_\+ws/src/x\+P\+L\+O\+R\+E\+R/src/\hyperlink{obstacleDetector_8cpp}{obstacle\+Detector.\+cpp}\end{DoxyCompactItemize}

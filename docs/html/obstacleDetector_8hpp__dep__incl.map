@@ -1,7 +1,7 @@
-<map id="/home/rishchou/catkin_ws/src/xPLORER/include/xplorer/obstacleDetector.hpp" name="/home/rishchou/catkin_ws/src/xPLORER/include/xplorer/obstacleDetector.hpp">
-<area shape="rect" id="node2" href="$navigator_8hpp.html" title=": Class implementation for Robot Navigation functionality " alt="" coords="220,109,399,165"/>
+<map id="/home/akash/catkin_ws/src/xPLORER/include/xplorer/obstacleDetector.hpp" name="/home/akash/catkin_ws/src/xPLORER/include/xplorer/obstacleDetector.hpp">
+<area shape="rect" id="node2" href="$navigator_8hpp.html" title=": Class implementation for Robot Navigation functionality " alt="" coords="179,109,357,165"/>
 <area shape="rect" id="node4" href="$testNavigator_8cpp.html" title=": Test file for testing class Navigator " alt="" coords="5,213,165,269"/>
-<area shape="rect" id="node5" href="$testObstacleDetector_8cpp.html" title=": Test file for testing class obstacleDetector " alt="" coords="453,213,627,269"/>
-<area shape="rect" id="node6" href="$obstacleDetector_8cpp.html" title=": Functional implementation for obstacle detection functionality " alt="" coords="474,109,683,165"/>
-<area shape="rect" id="node3" href="$navigator_8cpp.html" title=": Functional implementation for Robot Navigation functionality " alt="" coords="190,221,429,262"/>
+<area shape="rect" id="node5" href="$testObstacleDetector_8cpp.html" title=": Test file for testing class obstacleDetector " alt="" coords="370,213,545,269"/>
+<area shape="rect" id="node6" href="$obstacleDetector_8cpp.html" title=": Functional implementation for obstacle detection functionality " alt="" coords="433,109,589,165"/>
+<area shape="rect" id="node3" href="$navigator_8cpp.html" title=": Functional implementation for Robot Navigation functionality " alt="" coords="190,213,346,269"/>
 </map>

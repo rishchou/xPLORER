@@ -114,6 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a90c1101b6e3b4f26251d67793d41bd9c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobstacleDetector.html#a90c1101b6e3b4f26251d67793d41bd9c">collisionDetect</a> ()</td></tr>
 <tr class="memdesc:a90c1101b6e3b4f26251d67793d41bd9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for returning value of collision flag.  <a href="#a90c1101b6e3b4f26251d67793d41bd9c">More...</a><br /></td></tr>
 <tr class="separator:a90c1101b6e3b4f26251d67793d41bd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a829f311abfd9ece59f9f02b587048d6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobstacleDetector.html#a829f311abfd9ece59f9f02b587048d6a">setFlag</a> (bool val)</td></tr>
+<tr class="memdesc:a829f311abfd9ece59f9f02b587048d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for manually setting collision flag.  <a href="#a829f311abfd9ece59f9f02b587048d6a">More...</a><br /></td></tr>
+<tr class="separator:a829f311abfd9ece59f9f02b587048d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for obstacleDetection part of the robot. </p>
@@ -157,7 +160,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Callback function for subscriber to laserScan messages. </p>
-<p>Callback function for /scan topic.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>Message over the topic /scan </td></tr>
@@ -183,7 +185,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Callback function for subscriber to /dist topic. </p>
-<p>Callback function for /dist topic.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>Message over the topic /dist </td></tr>
@@ -194,9 +195,34 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a829f311abfd9ece59f9f02b587048d6a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void obstacleDetector::setFlag </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for manually setting collision flag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collision</td><td>flag value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/rishchou/catkin_ws/src/xPLORER/include/xplorer/<a class="el" href="obstacleDetector_8hpp_source.html">obstacleDetector.hpp</a></li>
-<li>/home/rishchou/catkin_ws/src/xPLORER/src/<a class="el" href="obstacleDetector_8cpp.html">obstacleDetector.cpp</a></li>
+<li>/home/akash/catkin_ws/src/xPLORER/include/xplorer/<a class="el" href="obstacleDetector_8hpp_source.html">obstacleDetector.hpp</a></li>
+<li>/home/akash/catkin_ws/src/xPLORER/src/<a class="el" href="obstacleDetector_8cpp.html">obstacleDetector.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

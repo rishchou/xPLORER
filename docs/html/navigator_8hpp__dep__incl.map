@@ -1,5 +1,5 @@
-<map id="/home/rishchou/catkin_ws/src/xPLORER/include/xplorer/navigator.hpp" name="/home/rishchou/catkin_ws/src/xPLORER/include/xplorer/navigator.hpp">
-<area shape="rect" id="node2" href="$navigator_8cpp.html" title=": Functional implementation for Robot Navigation functionality " alt="" coords="5,117,244,158"/>
-<area shape="rect" id="node3" href="$testNavigator_8cpp.html" title=": Test file for testing class Navigator " alt="" coords="269,109,429,165"/>
-<area shape="rect" id="node4" href="$testObstacleDetector_8cpp.html" title=": Test file for testing class obstacleDetector " alt="" coords="453,109,628,165"/>
+<map id="/home/akash/catkin_ws/src/xPLORER/include/xplorer/navigator.hpp" name="/home/akash/catkin_ws/src/xPLORER/include/xplorer/navigator.hpp">
+<area shape="rect" id="node2" href="$navigator_8cpp.html" title=": Functional implementation for Robot Navigation functionality " alt="" coords="5,109,161,165"/>
+<area shape="rect" id="node3" href="$testNavigator_8cpp.html" title=": Test file for testing class Navigator " alt="" coords="186,109,346,165"/>
+<area shape="rect" id="node4" href="$testObstacleDetector_8cpp.html" title=": Test file for testing class obstacleDetector " alt="" coords="371,109,545,165"/>
 </map>
