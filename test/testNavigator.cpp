@@ -101,6 +101,6 @@ TEST(TESTSuite, RobotNavigatorTest) {
        navigator navigator;
        EXPECT_NO_FATAL_FAILURE(navigator.explore(0));
        navigator.obsDet.setFlag(true);
-       EXPECT_NO_FATAL_FAILURE(navigator.explore(0));   
+       EXPECT_NO_FATAL_FAILURE(navigator.explore(0));
 }
 

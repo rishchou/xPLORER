@@ -98,8 +98,7 @@ void navigator::explore() {
       pub2.publish(msg);
       ros::spinOnce();
       loop_rate.sleep();
-      if(flag == 0)
-      {
+      if (flag == 0) {
             break;
       }
       }

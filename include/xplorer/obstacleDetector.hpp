@@ -92,7 +92,7 @@ class obstacleDetector {
  * @param collision flag value
  * @return void
  */
-void obstacleDetector::setFlag (bool val) { 
+void obstacleDetector::setFlag(bool val) {
         collision = val;
 }
 
