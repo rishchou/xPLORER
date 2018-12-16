@@ -77,7 +77,7 @@ navigator::~navigator() {
  * @param None
  * @return void
  */
-void navigator::explore() {
+void navigator::explore(int flag) {
      // Publishing rate is set up at 10Hz
       ros::Rate loop_rate(10);
      // Condition to keep running, until ROS functions properly
