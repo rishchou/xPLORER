@@ -51,7 +51,7 @@ int main(int argc, char* argv[]) {
     // Object creation of class navigator
     navigator navigator;
     // Function call to run the move function
-    navigator.explore();
+    navigator.explore(1);
     ROS_INFO("Turtlebot moving");
     return 0;
 }
