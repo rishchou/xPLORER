@@ -60,18 +60,18 @@ class TestClass {
 /**
  * @brief Test to find if object is initialized and 
  *        the navigator program functions properly
- * @param TESTSuite Gtest framework
+ * @param NavigatorComponentTest Gtest framework
  * @param Navigator_Object_is_initialized Test name
  */
-TEST(TESTSuite, Navigator_Object_is_initialized) {
+TEST(NavigatorComponentTest, Navigator_Object_is_initialized) {
         EXPECT_NO_FATAL_FAILURE(navigator navigator);
 }
 /**
  * @brief Test to find if publisher for /mobile_base/commands/velocity is working
- * @param TESTSuite Gtest framework
+ * @param NavigatorComponentTest Gtest framework
  * @param Publish_Test Test name
  */
-TEST(TESTSuite, NavigatorPublisherTest) {
+TEST(NavigatorComponentTest, NavigatorPublisherTest) {
         ros::NodeHandle n7;
         TestClass test;
         navigator navigator;
@@ -82,10 +82,10 @@ TEST(TESTSuite, NavigatorPublisherTest) {
 }
 /**
  * @brief Test to find if subscriber for /dist is working
- * @param TESTSuite Gtest framework
+ * @param NavigatorComponentTest Gtest framework
  * @param Subscribe_Test Test name
  */
-TEST(TESTSuite, NavigatorSubscriberTest) {
+TEST(NavigatorComponentTest, NavigatorSubscriberTest) {
         ros::NodeHandle n6;
         auto pub3 = n6.advertise<std_msgs::Float64>("/dist", 1000);
         ros::WallDuration(1).sleep();
@@ -93,10 +93,10 @@ TEST(TESTSuite, NavigatorSubscriberTest) {
 }
 /**
  * @brief Test to find if the main function for robot movement is working
- * @param TESTSuite Gtest framework
+ * @param NavigatorComponentTest Gtest framework
  * @param RobotNavigatorTest Test name
  */
-TEST(TESTSuite, RobotNavigatorTest) {
+TEST(NavigatorComponentTest, RobotNavigatorTest) {
        ros::NodeHandle n8;
        navigator navigator;
        EXPECT_NO_FATAL_FAILURE(navigator.explore(0));
