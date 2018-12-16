@@ -91,7 +91,7 @@ class obstacleDetector {
  * @param collision flag value
  * @return void
  */
-   void setFlag(bool val);
+    void setFlag(bool val);
 };
 
 #endif  // INCLUDE_XPLORER_OBSTACLEDETECTOR_HPP_
