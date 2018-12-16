@@ -200,3 +200,9 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 THE POSSIBILITY OF SUCH DAMAGE.
+
+## About the Authors
+
+Akash Atharv is a graduate student in Robotics at University of Maryland, College Park(Expected to graduate - May 2020). His interests include Robot Path Planning, Artificial Intelligence and Medical robotics.
+
+Rishabh Choudhary is also a graduate student in Robotics at University of Maryland, College Park(Expected to graduate - May 2020). His interests include Software Engineering and Deep Learning.
