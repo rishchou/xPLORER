@@ -44,18 +44,18 @@ THE POSSIBILITY OF SUCH DAMAGE.
 /**
  * @brief Test to find if object is initialized and the obstacleDetector 
  *        program functions properly
- * @param TESTSuite Gtest framework
+ * @param ObstacleDetectorComponentTest Gtest framework
  * @param ObstacleDetector_Object_is_initialized Test name
  */
-TEST(TESTSuite, ObstacleDetector_Object_is_initialized) {
+TEST(ObstacleDetectorComponentTest, ObstacleDetector_Object_is_initialized) {
         EXPECT_NO_FATAL_FAILURE(obstacleDetector obs);
 }
 /**
  * @brief Test to find if collision is not detected at a particular time
- * @param TESTSuite Gtest framework
+ * @param ObstacleDetectorComponentTest Gtest framework
  * @param Collision_should_not_be_detected Test name
  */
-TEST(TESTSuite, Collision_should_not_be_detected) {
+TEST(ObstacleDetectorComponentTest, Collision_should_not_be_detected) {
         obstacleDetector obs;
         ros::NodeHandle n4;
         ros::WallDuration(25).sleep();
