@@ -75,6 +75,7 @@ TEST(TESTSuite, NavigatorPublisherTest) {
         ros::NodeHandle n7;
         TestClass test;
         navigator navigator;
+        ros::Rate loop_rate(10);
         auto sub = n7.subscribe("/mobile_base/commands/velocity",
                            1000, &TestClass::publish, &test);
         EXPECT_EQ(1, sub.getNumPublishers());
@@ -90,3 +91,16 @@ TEST(TESTSuite, NavigatorSubscriberTest) {
         ros::WallDuration(1).sleep();
         EXPECT_EQ(pub3.getNumSubscribers(), 1);
 }
+/**
+ * @brief Test to find if the main function for robot movement is working
+ * @param TESTSuite Gtest framework
+ * @param RobotNavigatorTest Test name
+ */
+TEST(TESTSuite, RobotNavigatorTest) {
+       ros::NodeHandle n8;
+       navigator navigator;
+       EXPECT_NO_FATAL_FAILURE(navigator.explore(0));
+       navigator.obsDet.setFlag(true);
+       EXPECT_NO_FATAL_FAILURE(navigator.explore(0));   
+}
+
