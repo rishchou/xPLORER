@@ -39,9 +39,6 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "../include/xplorer/navigator.hpp"
 
-/**
- * @brief Constructor of the class
- */
 navigator::navigator() {
       ROS_INFO("Initializing navigator");
 // Publisher initialized for publishing to /mobile_base/commands/velocity topic
@@ -57,9 +54,7 @@ navigator::navigator() {
 // Zero Velocity message is sent to turtle bot
       pub2.publish(msg);
 }
-/**
- * @brief Destructor of the class
- */
+
 navigator::~navigator() {
 // Finally, before exiting, zero velocities are assigned to the turtlebot
       msg.linear.x = 0.0;
@@ -72,11 +67,6 @@ navigator::~navigator() {
       pub2.publish(msg);
 }
 
-/**
- * @brief Function to move the robot
- * @param None
- * @return void
- */
 void navigator::explore(int flag) {
      // Publishing rate is set up at 10Hz
       ros::Rate loop_rate(10);

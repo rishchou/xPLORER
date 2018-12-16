@@ -37,9 +37,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
  *============================================================================
  */
 #include"../include/xplorer/obstacleDetector.hpp"
-/**
- * @brief Constructor of the class
- */
+
 obstacleDetector::obstacleDetector() {
      ROS_INFO("Initializing obstacleDetector");
      // Initialize collision flag
@@ -53,16 +51,10 @@ obstacleDetector::obstacleDetector() {
         disSub1 = n1.subscribe<std_msgs::Float64>("/dist", 1000,
                          &obstacleDetector::sensorCallbackDist, this);
 }
-/**
- * @brief Destructor of the class
- */
+
 obstacleDetector::~obstacleDetector() {
 }
-/**
- * @brief Callback function for /scan topic
- * @param msg Message over the topic /scan
- * @return void 
- */
+
 void obstacleDetector::sensorCallback(const sensor_msgs
                                ::LaserScan::ConstPtr& msg) {
     float val = 1000;
@@ -76,11 +68,7 @@ void obstacleDetector::sensorCallback(const sensor_msgs
     // Publish minimum distance in the range on /dist topic
     disPub1.publish(floatVal);
 }
-/**
- * @brief Callback function for /dist topic
- * @param msg Message over the topic /dist
- * @return void 
- */
+
 void obstacleDetector::sensorCallbackDist(const std_msgs
                                   ::Float64::ConstPtr& msg) {
     float val = 1;
@@ -90,19 +78,11 @@ void obstacleDetector::sensorCallbackDist(const std_msgs
         collision = false;
     }
 }
-/**
- * @brief Function for returning value of collision flag
- * @param none
- * @return bool collision flag value
- */
+
 bool obstacleDetector::collisionDetect() {
         return collision;
 }
-/**
- * @brief Function for manually setting collision flag
- * @param collision flag value
- * @return none
- */
+
 void obstacleDetector::setFlag(bool val) {
         collision = val;
 }
