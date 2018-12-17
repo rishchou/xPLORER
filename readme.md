@@ -79,9 +79,9 @@ sudo apt-get install ros-kinetic-octomap
  
 This project was developed following pair programming concepts and SIP. The estimated and completed tasks have been stored in the form of product backlog, Iteration backlog and work log to include the specifics of each task. The product backlog contains the set of all of the tasks to be completed for the given feature implementation. The iteration backlog includes tasks that were repeated over the course of Sprint.
 
-Detailed SIP Enactment with product backlog,iteration backlog and work log can be found [at](https://docs.google.com/spreadsheets/d/1m1UHrcsnNCY8bqwcfVqGJSqxgKsjhua1r7esJMIEKb0/edit?usp=sharing)
+Detailed SIP Enactment with product backlog,iteration backlog and work log can be found [here](https://docs.google.com/spreadsheets/d/1m1UHrcsnNCY8bqwcfVqGJSqxgKsjhua1r7esJMIEKb0/edit?usp=sharing)
 
-Sprint notes can be found [at](https://docs.google.com/document/d/1vihsMah5-x3lxd72F6U38xuexMgioh-XDoyO9bQRQPM/edit?usp=sharing)
+Sprint notes can be found [here](https://docs.google.com/document/d/1vihsMah5-x3lxd72F6U38xuexMgioh-XDoyO9bQRQPM/edit?usp=sharing)
 
 ## To-do tasks for pair programming (Driver navigator discussion)
 - [x] Add class and activity diagram 
@@ -90,7 +90,7 @@ Sprint notes can be found [at](https://docs.google.com/document/d/1vihsMah5-x3lx
 - [x] Update SIP Logs
 - [x] Add pending test cases
 - [x] Fix existing bugs 
-- [ ] Upload demo presentation
+- [x] Upload demo presentation
 
 ## Operation/Demo steps
 
@@ -122,6 +122,11 @@ The rviz window shows the actual 3D map generation using octomap in real time as
 <p align="center">
   <img width="600" height="400" src="https://github.com/rishchou/xPLORER/blob/master/results/demo.png">
 </p>
+
+## Presentation 
+The video presentation for the given project can be found [here](https://youtu.be/rrMOxFsIhBU)
+
+The slides for the presentation can be found [here](https://drive.google.com/file/d/1L6KJ7QDFrKCbVW0Tuh6KQ3wDBHrHpKEu/view?usp=sharing) 
 
 ## Save the generated map
 
@@ -170,6 +175,13 @@ Unit tests have been written for each class to test the functionality and interf
 ```
 cd ~/catkin_ws
 catkin_make run_tests_xplorer
+```
+
+We can also run the test node using the test.launch file as shown below:
+```
+cd ~/catkin_ws
+source devel/setup.bash
+roslaunch xplorer test.launch
 ```
 
 ## Doxygen Documentation 
