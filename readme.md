@@ -18,6 +18,10 @@ etc. without any human intervention.
 
 xPLORER is an exploration Robot by Acme Robotics which works in an unknown indoor environment and generates a real time 3D map of the region as it traverses the whole environment and keeps on extending the map to develop a 3D octomap of the enviroment. It used turtlebot package on gazebo to simulate the exploration in a custom indoor world and octomap package to integrate the 3D mapping.  
 
+<p align="center">
+  <img width="700" height="800" src="https://github.com/rishchou/xPLORER/blob/master/results/demo1.png">
+</p>
+
 ## Personnel
 1. Rishabh Choudhary - Graduate Student pursuing Masters of Engineering in Robotics at University of Maryland. My interests lie in computer vision, ROS, machine learning and AI.
 Email - rishchou@umd.edu
