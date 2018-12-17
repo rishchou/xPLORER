@@ -35,7 +35,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
  * @brief      : Main source file for runnning the program
  *============================================================================
  */
-
+#include <iostream>
+#include "ros/ros.h"
 #include "../include/xplorer/navigator.hpp"
 /**
  * @brief Main function where the node "xplorer" is created and operates

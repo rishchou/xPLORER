@@ -37,6 +37,12 @@ THE POSSIBILITY OF SUCH DAMAGE.
  *============================================================================
  */
 
+#include <iostream>
+#include "ros/ros.h"
+#include "sensor_msgs/LaserScan.h"
+#include "std_msgs/Float64.h"
+#include "geometry_msgs/Twist.h"
+#include "../include/xplorer/obstacleDetector.hpp"
 #include "../include/xplorer/navigator.hpp"
 
 navigator::navigator() {

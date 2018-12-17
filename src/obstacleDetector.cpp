@@ -36,6 +36,12 @@ THE POSSIBILITY OF SUCH DAMAGE.
  * @brief      : Functional implementation for obstacle detection functionality
  *============================================================================
  */
+
+#include <iostream>
+#include "ros/ros.h"
+#include "sensor_msgs/LaserScan.h"
+#include "std_msgs/Float64.h"
+#include "geometry_msgs/Twist.h"
 #include"../include/xplorer/obstacleDetector.hpp"
 
 obstacleDetector::obstacleDetector() {
