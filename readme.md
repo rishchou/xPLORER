@@ -18,7 +18,13 @@ etc. without any human intervention.
 
 xPLORER is an exploration Robot by Acme Robotics which works in an unknown indoor environment and generates a real time 3D map of the region as it traverses the whole environment and keeps on extending the map to develop a 3D octomap of the enviroment. It used turtlebot package on gazebo to simulate the exploration in a custom indoor world and octomap package to integrate the 3D mapping.  
 
-## Authors
+## Personnel
+1. Rishabh Choudhary - Graduate Student pursuing Masters of Engineering in Robotics at University of Maryland. My interests lie in computer vision, ROS, machine learning and AI.
+Email - rishchou@umd.edu
+
+2. Akash Atharv - Masters student at University of Maryland majoring in Robotics. My areas of interests are path planning algorithms, medical robotics and AI.
+
+## Pair programming sprint assignment
 
 Sprint 1:
 - Driver - Rishabh Choudhary
@@ -28,11 +34,16 @@ Sprint 2:
 - Driver - Akash Atharv
 - Navigator - Rishabh Choudhary
 
+Sprint 3: 
+- Driver - Rishabh Choudhary
+- Navigator - Akash Atharv
+
 ## Project Workflow
 The activity diagram shown below explains the working of the project. 
 <p align="center">
-  <img width="700" height="800" src="https://github.com/rishchou/xPLORER/blob/master/UML/Revised/Activity_Diagram.png">
+  <img width="700" height="800" src="https://github.com/rishchou/xPLORER/blob/master/UML/Revised/Activity_Diagram_revised.jpeg">
 </p>
+
 ## Dependencies
 
 The project requires ROS kinetic, catkin, Gazebo, TurtleBot and octomap packages and it is developed on UBUNTU 16.04 LTS. 
@@ -73,6 +84,9 @@ Sprint notes can be found [at](https://docs.google.com/document/d/1vihsMah5-x3lx
 - [x] Add defect log and release backlog
 - [x] Add LICENSE file
 - [x] Update SIP Logs
+- [x] Add pending test cases
+- [x] Fix existing bugs 
+- [ ] Upload demo presentation
 
 ## Operation/Demo steps
 
@@ -106,6 +120,11 @@ The rviz window shows the actual 3D map generation using octomap in real time as
 </p>
 
 ## Save the generated map
+
+To save the map generated in real time after a satisfactory region has been covered by the turtlebot, use the given command while the demo.launch is running.
+rosrun octomap_server octomap_saver results/<filename.ot>
+
+This will save the generated map as an octree file format in results directory. 
 
 ## View the generated map
 
@@ -160,10 +179,9 @@ cd <path_to_repository>/docs
 doxygen xplorer.config
 ```
 
-## Code Coverage
-
 ## Known issues/ bugs
-To be updated
+The octomap uses the /camera/depth/points topic to create the 3D octomap of the environment using the point cloud. Use of ROSBAG for camera topics is inefficient as the bag file increases in size exponentially within a few seconds. Alternative ways need to be found out to record camera topics.
+ 
 
 ## API
 To be updated
