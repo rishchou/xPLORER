@@ -124,7 +124,7 @@ The rviz window shows the actual 3D map generation using octomap in real time as
 </p>
 
 ## Presentation 
-The video presentation for the given project can be found [here](https://youtu.be/rrMOxFsIhBU)
+The video presentation for the given project can be found [here](https://www.youtube.com/watch?v=Gh-96DrIyyU)
 
 The slides for the presentation can be found [here](https://drive.google.com/file/d/1L6KJ7QDFrKCbVW0Tuh6KQ3wDBHrHpKEu/view?usp=sharing) 
 
