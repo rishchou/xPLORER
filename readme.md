@@ -19,7 +19,7 @@ etc. without any human intervention.
 xPLORER is an exploration Robot by Acme Robotics which works in an unknown indoor environment and generates a real time 3D map of the region as it traverses the whole environment and keeps on extending the map to develop a 3D octomap of the enviroment. It used turtlebot package on gazebo to simulate the exploration in a custom indoor world and octomap package to integrate the 3D mapping.  
 
 <p align="center">
-  <img width="700" height="800" src="https://github.com/rishchou/xPLORER/blob/master/results/demo1.png">
+  <img width="700" height="500" src="https://github.com/rishchou/xPLORER/blob/master/results/demo1.png">
 </p>
 
 ## Personnel
@@ -27,7 +27,7 @@ xPLORER is an exploration Robot by Acme Robotics which works in an unknown indoo
 Email - rishchou@umd.edu
 
 2. Akash Atharv - Masters student at University of Maryland majoring in Robotics. My areas of interests are path planning algorithms, medical robotics and AI.
-
+Email - atharv@umd.edu
 ## Pair programming sprint assignment
 
 Sprint 1:
@@ -186,10 +186,6 @@ doxygen xplorer.config
 ## Known issues/ bugs
 The octomap uses the /camera/depth/points topic to create the 3D octomap of the environment using the point cloud. Use of ROSBAG for camera topics is inefficient as the bag file increases in size exponentially within a few seconds. Alternative ways need to be found out to record camera topics.
  
-
-## API
-To be updated
-
 ## License
 
 ```
